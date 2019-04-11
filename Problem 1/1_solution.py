@@ -13,6 +13,7 @@ OUTPUT = ''
 
 def process_external_class(person, depth):
     """
+    This funciton is called whenever a Person object is encountered.
 
     :param person: Object of the person class
     :param depth: Depth where this object was found
@@ -28,6 +29,15 @@ def process_external_class(person, depth):
 
 
 def compute_depth(data, depth=1):
+    """
+    A recursive function prints key and depth of the key
+    whenever data passed to it is a dict. If a Person
+    class object is passed it will call process_external_class()
+
+    :param data: dict input data
+    :param depth: defaults to 1, unless otherwise mentioned
+    :return: depth
+    """
     global OUTPUT
 
     if isinstance(data, Person) and data:

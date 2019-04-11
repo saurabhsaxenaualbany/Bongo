@@ -24,7 +24,16 @@ def match(search_index, pattern_index, search_string, search_pattern, memo):
 
 
 def is_match(s, p):
+    """
+    Result Matrix is a 2D list
+    Run time complexity is O(m x n) where m,n is the length of the string and patten
+    Space complexity is also O(m x n)
+    :param s: String to check alongside pattern
+    :param p: Pattern
+    :return: Boolean - if the string matches the pattern or not
+    """
     result_matrix = [[None]*(len(s)+1) for _ in range(len(p)+1)]
+    print(result_matrix)
     return match(0, 0, s, p, result_matrix)
 
 
