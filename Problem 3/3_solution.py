@@ -33,7 +33,6 @@ def is_match(s, p):
     :return: Boolean - if the string matches the pattern or not
     """
     result_matrix = [[None]*(len(s)+1) for _ in range(len(p)+1)]
-    print(result_matrix)
     return match(0, 0, s, p, result_matrix)
 
 
